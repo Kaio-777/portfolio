@@ -1,0 +1,159 @@
+/* ==========================================================================
+   global.css — Design System: variáveis, reset e estilos globais
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS (CSS Custom Properties)
+   -------------------------------------------------------------------------- */
+:root {
+    /* Cores de fundo */
+    --bg-color-start:     #000000;
+    --bg-color-end:       #0f0f0f;
+
+    /* Tipografia */
+    --text-primary:       #ffffff;
+    --text-secondary:     #dcdcdc;
+
+    /* Paleta primária (vermelho) */
+    --primary-color:      #a30000;
+    --primary-hover:      #d10000;
+    --primary-glow:       rgba(163, 0, 0, 0.6);
+    --primary-glow-light: rgba(163, 0, 0, 0.2);
+
+    /* Painéis / glassmorphism */
+    --panel-bg:           rgba(15, 15, 15, 0.6);
+    --panel-bg-alt:       rgba(0, 0, 0, 0.4);
+
+    /* Tipografia */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body:    'Inter', sans-serif;
+}
+
+/* Tema claro — sobrescreve apenas os tokens necessários */
+body.light-mode {
+    --bg-color-start:  #fdfdfd;
+    --bg-color-end:    #f4f4f4;
+    --text-primary:    #1a1a1a;
+    --text-secondary:  #4a4a4a;
+    --panel-bg:        rgba(255, 255, 255, 0.85);
+    --panel-bg-alt:    rgba(245, 245, 245, 0.9);
+    --primary-glow:    rgba(163, 0, 0, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Scrollbar Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #0a0a0a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-color-start) 0%, var(--bg-color-end) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT GLOBAL
+   -------------------------------------------------------------------------- */
+
+/* Impede que seções fiquem escondidas sob o header fixo */
+section {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 100px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. ANIMAÇÕES DE ENTRADA/SAÍDA DE SEÇÃO (IntersectionObserver)
+   -------------------------------------------------------------------------- */
+main > section {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+main > section.section--visible {
+    opacity: 1;
+}
+
+main > section.section--exit-top {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   5. TRANSIÇÃO DE PÁGINA (clique no menu → fade-out/in)
+   -------------------------------------------------------------------------- */
+main {
+    transition: opacity 0.25s ease;
+}
+
+main.fade-transition {
+    opacity: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. SCROLLBAR CUSTOMIZADA (WebKit)
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-hover); }
+
+/* --------------------------------------------------------------------------
+   7. BARRA DE PROGRESSO DO SCROLL
+   -------------------------------------------------------------------------- */
+#scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary-color), #ff2222);
+    z-index: 9999;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* --------------------------------------------------------------------------
+   8. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(163, 0, 0, 0.2);
+}
+
+.site-footer p {
+    margin: 0;
+    opacity: 0.7;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaio Ribeiro | Engenheiro de Software</title>
+    
+    <!-- Otimização SEO básica -->
+    <meta name="description" content="Portfólio de Kaio Ribeiro, Engenheiro de Software. Conheça meus projetos, habilidades e entre em contato.">
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Ícones das Tecnologias (Devicon) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- Estilos componentizados -->
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/hero.css">
+    <link rel="stylesheet" href="src/css/utils.css">
+    <link rel="stylesheet" href="src/css/sobre.css">
+    <link rel="stylesheet" href="src/css/projetos.css">
+    <link rel="stylesheet" href="src/css/contato.css">
+</head>
+<body>
+    <!-- Barra de Progresso do Scroll -->
+    <div id="scroll-progress-bar"></div>
+
+    <!-- Logo Gaara Permanente -->
+    <a href="#home" class="gaara-logo" aria-label="Logo do Amor (Ai) - Gaara">愛</a>
+
+    <!-- Cabeçalho (Navegação) -->
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Controles do Topo Direito (Tema e Idioma) -->
+    <div class="top-right-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+            <!-- Ícone de Sol (escondido no modo escuro) -->
+            <svg id="icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <!-- Ícone de Lua (visível no modo escuro) -->
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <div class="lang-switch">
+            <button class="lang-btn active">PT</button>
+            <button class="lang-btn">EN</button>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Inicial (Hero) -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Kaio Ribeiro</h1>
+                <h2 class="hero-subtitle">ENGENHEIRO DE SOFTWARE</h2>
+                
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                    <a href="curriculo.pdf" download class="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right: 6px;">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="tech-stack">
+                    <p class="tech-title">TECH ARSENAL (BUT NOT LIMITED TO...)</p>
+                    <div class="tech-icons">
+                        <div class="icon" title="C#"><i class="devicon-csharp-plain"></i></div>
+                        <div class="icon" title="Java"><i class="devicon-java-plain"></i></div>
+                        <div class="icon" title="JavaScript"><i class="devicon-javascript-plain"></i></div>
+                        <div class="icon" title="React"><i class="devicon-react-original"></i></div>
+                        <div class="icon" title="Docker"><i class="devicon-docker-plain"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <!-- A imagem será renderizada aqui através do CSS -->
+            </div>
+        </section>
+        
+        <!-- Futuras seções (Projetos) podem ser adicionadas aqui -->
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="sobre">
+            <div class="sobre-container">
+                <div class="sobre-content">
+                    <h2 class="section-title">Sobre <span>Mim</span></h2>
+                    <p class="sobre-text">
+                        Sou um <strong>Engenheiro de Software</strong> apaixonado por criar aplicações de alto desempenho e interfaces dinâmicas. 
+                        Com base sólida no desenvolvimento backend e frontend, resolvo problemas complexos através de código limpo, arquiteturas robustas e design impactante.
+                    </p>
+                    <p class="sobre-text">
+                        Atualmente estudo na <strong>Jala University</strong>, sempre explorando novas tecnologias e aprimorando meu "Tech Arsenal" através do aprendizado constante. 
+                        Meu foco está em entregar soluções de ponta, combinando dedicação, disciplina e paixão por inovação. Quando não estou programando, gosto de jogar futebol e assistir animes, atividades que me ajudam a manter o equilíbrio e a criatividade.
+                    </p>
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <h3>Código Limpo</h3>
+                            <p>Boas Práticas & Arquitetura</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Soluções Rápidas</h3>
+                            <p>Foco em Performance</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Design Moderno</h3>
+                            <p>Visual Impactante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Projetos -->
+        <section id="projetos" class="projetos">
+            <div class="projetos-container">
+                <h2 class="section-title">Meus <span>Projetos</span></h2>
+                
+                <div class="projetos-grid">
+                    <!-- Projeto 1 -->
+                    <div class="projeto-card">
+                        <div class="projeto-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <div class="projeto-links">
+                                <a href="#" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                                <a href="#" target="_blank" aria-label="Live Demo"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="projeto-title">Em Breve</h3>
+                        <p class="projeto-desc">Estou preparando meus melhores projetos para exibir aqui. Volte em breve para ver aplicações escaláveis e interfaces incríveis ganhando vida.</p>
+                        <div class="projeto-tech">
+                            <span>Java</span>
+                            <span>React</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 2 -->
+                    <div class="projeto-card">
+                        <div class="projeto-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <div class="projeto-links">
+                                <a href="#" target="_blank" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="projeto-title">Em Construção</h3>
+                        <p class="projeto-desc">Outro projeto focado em performance e arquitetura robusta. Em breve os detalhes completos do repositório estarão disponíveis.</p>
+                        <div class="projeto-tech">
+                            <span>C#</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="contact">
+            <div class="contact-container">
+                <h2 class="section-title">Entre em <span>Contato</span></h2>
+                <p class="contact-subtitle">Sinta-se à vontade para me mandar uma mensagem para conversarmos sobre tecnologia, projetos ou oportunidades.</p>
+                
+                <div class="contact-cards">
+                    <a href="mailto:kaioribeirodesousa321@gmail.com" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <h3>Email</h3>
+                        <p>kaioribeirodesousa321@gmail.com</p>
+                    </a>
+                    <a href="https://wa.me/5587981124207" target="_blank" class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                        </svg>
+                        <h3>WhatsApp</h3>
+                        <p>(87) 98112-4207</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kaioribeiro777/" target="_blank" class="contact-card">
+                        <i class="devicon-linkedin-plain"></i>
+                        <h3>LinkedIn</h3>
+                        <p>kaioribeiro777</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Kaio Ribeiro. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5587981124207" target="_blank" class="whatsapp-btn" aria-label="Fale comigo no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Lógica de interação -->
+    <script src="src/js/main.js"></script>
+</body>
+</html>

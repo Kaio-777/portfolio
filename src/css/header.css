@@ -1,0 +1,318 @@
+/* src/css/header.css */
+
+/* === HEADER PRINCIPAL === */
+.header {
+    width: 100%;
+    padding: 2rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* Transição suave de subida/descida */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+/* Estado: escondido ao rolar pra baixo */
+.header.header--hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+/* === NAV LINKS === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    background-color: var(--primary-color);
+    padding: 0 2.5rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 18px var(--primary-glow);
+    height: 40px;              /* mesmo tamanho do botão de tema */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    padding-bottom: 3px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover apenas para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .nav-links li a:hover {
+        opacity: 0.75;
+        letter-spacing: 2px;
+    }
+}
+
+.nav-links li a:active {
+    opacity: 0.6;
+    transform: scale(0.97);
+}
+
+/* Link ativo — só a linha embaixo, sem glow */
+.nav-links li a.active-link {
+    opacity: 1;
+}
+
+/* === CONTROLES DO TOPO DIREITO === */
+.top-right-controls {
+    position: fixed;
+    top: 25px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+/* Esconde junto com o header ao rolar */
+.top-right-controls.controls--hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+}
+
+/* === BOTÃO DE TEMA (Sol/Lua) === */
+.theme-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover apenas para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .theme-btn:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        box-shadow: 0 0 12px var(--primary-glow);
+        color: white;
+    }
+}
+
+.theme-btn:active {
+    transform: scale(0.95);
+    background: var(--primary-color);
+    color: white;
+}
+
+/* === SELETOR DE IDIOMA (PT / EN) === */
+.lang-switch {
+    display: flex;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    height: 40px;           /* mesma altura do botão de tema */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Modo claro - mantém o mesmo estilo */
+body.light-mode .lang-switch {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Hover apenas para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .lang-btn:hover {
+        background: var(--primary-color);
+        color: white;
+        box-shadow: 0 0 10px var(--primary-glow);
+    }
+}
+
+.lang-btn:active {
+    transform: scale(0.95);
+}
+
+/* === LOGO GAARA === */
+.gaara-logo {
+    position: fixed;
+    top: 25px;
+    left: 5%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-glow), 0 0 30px var(--primary-glow);
+    z-index: 1000;
+    transition: transform 0.3s ease, text-shadow 0.3s ease,
+                opacity 0.4s ease;
+    text-decoration: none;
+    line-height: 1;
+    font-family: sans-serif;
+}
+
+.gaara-logo:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px var(--primary-color), 0 0 50px var(--primary-glow);
+}
+
+/* === RESPONSIVIDADE MOBILE === */
+@media (max-width: 768px) {
+
+    /* ── Logo: canto superior esquerdo, fixo ── */
+    .gaara-logo {
+        position: fixed;
+        top: 18px;
+        left: 5%;
+        font-size: 1.8rem;
+        z-index: 1001;
+    }
+
+    /* ── Controles (Tema + PT/EN): canto superior direito, fixo ── */
+    .top-right-controls {
+        position: fixed;
+        top: 18px;
+        right: 5%;
+        gap: 8px;
+        height: 38px;
+        z-index: 1001;
+    }
+
+    .theme-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .lang-switch {
+        height: 38px;
+        padding: 0.2rem;
+    }
+
+    .lang-btn {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    /* ── Header: centralizado abaixo ── */
+    .header {
+        top: 0;
+        padding: 70px 5% 1rem 5%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    /* Nav links: centralizado e responsivo */
+    .nav-links {
+        padding: 0 1.5rem;
+        height: 40px;
+        gap: 1.2rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+        padding-bottom: 2px;
+    }
+    
+    .nav-links li a:hover {
+        letter-spacing: 1px;
+    }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 380px) {
+    .gaara-logo {
+        font-size: 1.5rem;
+        top: 16px;
+    }
+    
+    .top-right-controls {
+        top: 16px;
+        height: 36px;
+    }
+    
+    .theme-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .lang-switch {
+        height: 36px;
+    }
+    
+    .nav-links {
+        gap: 0.8rem;
+        padding: 0 1rem;
+        height: 38px;
+    }
+    
+    .nav-links li a {
+        font-size: 0.7rem;
+    }
+}
+

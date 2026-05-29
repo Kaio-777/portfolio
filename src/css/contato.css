@@ -1,0 +1,150 @@
+/* src/css/contato.css */
+.contact {
+    padding: 8rem 10%;
+    position: relative;
+    background: transparent;
+    border-top: 1px solid rgba(163, 0, 0, 0.2);
+    scroll-margin-top: 80px;
+    z-index: 10;
+    transition: opacity 0.6s ease-out;
+    opacity: 1;
+}
+
+.contact-container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3.5rem auto;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Grid de 3 colunas no desktop, centralizado */
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.contact-card {
+    background: var(--panel-bg);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(163, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover apenas para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--primary-glow-light);
+        border-color: rgba(163, 0, 0, 0.4);
+    }
+}
+
+.contact-card:active {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px var(--primary-glow-light);
+    border-color: rgba(163, 0, 0, 0.3);
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    transition: filter 0.3s ease;
+}
+
+.contact-card svg {
+    color: var(--primary-color);
+    transition: filter 0.3s ease;
+}
+
+.contact-card:hover i,
+.contact-card:hover svg {
+    filter: drop-shadow(0 0 8px var(--primary-glow));
+}
+
+.contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0.25rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    word-break: break-word;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Centraliza o 3º card sozinho */
+    .contact-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 340px;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .contact {
+        padding: 4rem 5%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .contact-subtitle {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-card:last-child {
+        grid-column: auto;
+        max-width: 100%;
+        justify-self: stretch;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.85rem;
+    }
+}
