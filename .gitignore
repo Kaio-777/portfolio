@@ -1,5 +1,6 @@
 # Vercel
 .vercel
+vercel.json
 
 # Node modules (caso adicione no futuro)
 node_modules/
