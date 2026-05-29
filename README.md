@@ -101,7 +101,7 @@ For hot-reload during development, use **Live Server** extension in VS Code or a
 This project is configured for seamless deployment on Vercel:
 1. Push your code to a GitHub repository.
 2. Import the repository in Vercel.
-3. Vercel will automatically detect the `vercel.json` configuration and deploy your static site.
+3. Vercel will automatically detect the static project and deploy it out-of-the-box (zero configuration needed).
 
 ---
 
